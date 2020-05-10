@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<style>
+	.sand {
+    background: #FAF2C3;
+    width: 100%;
+    height: 50%;
+    margin: -10px;
+    position: fixed;
+    bottom: 0px;
+  }
+
+  .sky {
+    background: #87E0FF;
+    width: 100%;
+    height: 30%;
+    margin: -10px;
+    position: fixed;
+    bottom: 70%;
+  }
+
+  #c1 {
+    background: #FFF;
+    border-radius: 25px;
+    width: 35%;
+    height: 5%;
+    margin: -10px;
+    position: fixed;
+    bottom: 85%;
+    left: 25%;
+  }
+
+  #c2 {
+    background: #FFF;
+    border-radius: 50%;
+    width: 10%;
+    height: 5%;
+    margin: -10px;
+    position: fixed;
+    bottom: 88%;
+    left: 28%;
+  }
+
+   #c3 {
+    background: #FFF;
+    border-radius: 50%;
+    width: 20%;
+    height: 7%;
+    margin: -10px;
+    position: fixed;
+    bottom: 88%;
+    left: 37%;
+  }
+
+  .sun {
+    background: linear-gradient(red, yellow);
+    border-radius: 100%;
+    position: absolute;
+    right: -3%;
+    width: 100px;
+    height: 100px;
+    animation-name: sun-movement;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 100;
+  }
+
+  @keyframes sun-movement {
+    from { transform: translate3d(0, 0, 0);     }
+    to   { 
+      transform: translate3d(-250px, 300px, 0px);
+     }
+  }
+
+    .ocean {
+    background: #006994;
+    width: 100%;
+    height: 20%;
+    margin: -10px;
+    position: fixed;
+    bottom: 50%;
+    z-index: 200;
+  }
+
+  .cloud {
+    animation-name: cloud-movement;
+    animation-duration: 5s;
+    animation-iteration: infinite;
+    z-index: 120;
+  }
+
+  @keyframes cloud-movement {
+    100% {
+      left: 130%;
+    }
+  }
+
+</style>
+<html>
+<div class="sand"></div>
+<div class="ocean"></div>
+<div class="sky"></div>
+<div class="sun"></div>
+
+<div class="cloud" id="c1"></div>
+<div class="cloud" id="c2"></div>
+<div class="cloud" id="c3"></div>
+</html>
